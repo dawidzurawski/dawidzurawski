@@ -4,24 +4,46 @@ import Link from "next/link";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const currentRoute = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav>
       <div className="hidden sm:flex flex-row justify-between items-center p-4">
-        <Link href="/" className="hover:text-zinc-300">
+        <Link
+          href="/"
+          className={`${
+            currentRoute === "/" ? "text-zinc-400" : "text-zinc-600"
+          } hover:text-lime-500`}
+        >
           Home
         </Link>
         <div className="flex gap-4">
-          <Link href="/about" className="hover:text-zinc-300">
+          <Link
+            href="/about"
+            className={`${
+              currentRoute === "/about" ? "text-zinc-400" : "text-zinc-600"
+            } hover:text-lime-500`}
+          >
             About
           </Link>
-          <Link href="/blog" className="hover:text-zinc-300">
+          <Link
+            href="/blog"
+            className={`${
+              currentRoute === "/blog" ? "text-zinc-400" : "text-zinc-600"
+            } hover:text-lime-500`}
+          >
             Blog
           </Link>
-          <Link href="/projects" className="hover:text-zinc-300">
+          <Link
+            href="/projects"
+            className={`${
+              currentRoute === "/projects" ? "text-zinc-400" : "text-zinc-600"
+            } hover:text-lime-500`}
+          >
             Projects
           </Link>
         </div>

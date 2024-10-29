@@ -1,15 +1,25 @@
 import React from "react";
+import Button from "./Button";
+import LetterHover from "./LetterHover";
 
 const Hero = () => {
   return (
-    <header className="mt-[200px] flex justify-center items-center">
+    <header className="mt-[200px] flex justify-center items-center cursor-pointer">
       <div>
-        <h1 className="text-4xl md:text-6xl font-semi-bold tracking-tighter">
-          Dawid Zurawski
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
+          <LetterHover text="Dawid Zurawski" />
         </h1>
-        <p className="font-light mt-2">
-          Frontend. Finance. Everything fintech.
+        <p className="font-light mt-2 text-zinc-300">
+          <span className="hover:text-cyan-400"> Frontend. </span>
+          <span className="hover:text-purple-500"> Fintech. </span>
+          <span className="text-lime-400 font-bold hover:text-red-500">
+            AI.
+          </span>
         </p>
+
+        <div className="mt-10">
+          <Button label="Contact me" />
+        </div>
       </div>
     </header>
   );
