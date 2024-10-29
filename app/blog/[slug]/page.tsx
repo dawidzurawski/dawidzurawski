@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { getArticlesData } from "@/lib/articles";
 
 // Awaiting params object in the async function
