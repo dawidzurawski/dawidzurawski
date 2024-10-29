@@ -1,6 +1,10 @@
 import React from "react";
 
-const LetterHover = ({ text }) => {
+interface LetterHoverProps {
+  text: string;
+}
+
+const LetterHover: React.FC<LetterHoverProps> = ({ text }) => {
   return (
     <span>
       {text.split("").map((char, index) => (
