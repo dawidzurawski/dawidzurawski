@@ -1,8 +1,15 @@
+import { getCategorisedArticles } from "@/lib/articles";
 import React from "react";
+import ArticleItemList from "./ArticleListItem";
 import Button from "./Button";
 import LetterHover from "./LetterHover";
 
 const Hero = () => {
+  const articles = getCategorisedArticles();
+
+  console.log(articles);
+  console.log("tets");
+
   return (
     <header className="mt-[200px] flex justify-center items-center cursor-pointer">
       <div>
