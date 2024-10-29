@@ -18,3 +18,9 @@ body {
   color: var(--foreground);
   background: var(--background);
 }
+
+@screen lg {
+  body {
+    margin-inline: 280px;
+  }
+}
